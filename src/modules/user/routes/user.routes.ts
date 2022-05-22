@@ -1,12 +1,12 @@
 import { Router } from 'express';
 import { UserController } from '../controller/user.controller';
 
-const userRoutes = Router();
+const userRouter = Router();
 
 const userController = new UserController();
 
-userRoutes.post('/', userController.createUser);
+userRouter.post('/', userController.createUser);
 
-userRoutes.patch('/update/:id', userController.updateUser);
+userRouter.patch('/update/:id', userController.updateUser);
 
-export default userRoutes;
+export default userRouter;

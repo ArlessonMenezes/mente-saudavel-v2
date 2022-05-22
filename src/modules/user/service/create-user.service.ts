@@ -1,7 +1,7 @@
 import { CreateUserDto } from "../types/create-user.dto";
 import AppError from '../../../errors/app.errors';
 import { AppDataSource } from "../../../database/connection";
-import { User } from "../entities/user.entity";
+import { User } from "../entity/user.entity";
 import { hash } from 'bcrypt';
 
 export class CreateUserService {

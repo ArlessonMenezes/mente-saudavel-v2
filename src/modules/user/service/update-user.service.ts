@@ -1,6 +1,6 @@
 import { UpdateUserDto } from "../types/update-user.dto";
 import { AppDataSource } from '../../../database/connection';
-import { User } from '../entities/user.entity';
+import { User } from '../entity/user.entity';
 import AppError from '../../../errors/app.errors';
 
 export class UpdateUserService {
