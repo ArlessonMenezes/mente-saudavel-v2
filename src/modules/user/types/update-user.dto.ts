@@ -1,4 +1,4 @@
-import { IsEmail, IsString } from "class-validator";
+import { IsEmail, IsInt, IsString } from "class-validator";
 
 export class UpdateUserDto {
     @IsString()
@@ -16,7 +16,7 @@ export class UpdateUserDto {
 
     @IsString()
     cidade: string;
-    
+
     @IsString()
     estado: string;
 }

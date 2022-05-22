@@ -7,4 +7,6 @@ const userController = new UserController();
 
 userRoutes.post('/', userController.createUser);
 
+userRoutes.patch('/update/:id', userController.updateUser);
+
 export default userRoutes;

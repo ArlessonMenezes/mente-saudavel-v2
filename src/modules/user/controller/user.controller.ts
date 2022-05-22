@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { CreateUserService } from '../service/create-user.service';
+import { UpdateUserService } from '../service/update-user.service';
 
 export class UserController {
 
@@ -11,4 +12,14 @@ export class UserController {
 
         return res.status(200).json(user);
     };
+
+    async updateUser(req: Request, res: Response) {
+        const { id } = req.params;
+
+        const userRepository = new UpdateUserService();
+
+        const user = await userRepository.execute(Number(id), req.body);
+
+        return res.status(200).json(user);
+    }
 };
