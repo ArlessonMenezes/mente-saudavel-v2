@@ -7,6 +7,6 @@ const medicController = new MedicController();
 
 medicRouter.post('/', medicController.createMedic);
 
-
+medicRouter.patch('/update/:id', medicController.medicUpdate)
 
 export default medicRouter;

@@ -5,7 +5,7 @@ import { UpdateUserService } from '../service/update-user.service';
 export class UserController {
 
     async createUser(req: Request, res: Response) {
-        
+
         const userService = new CreateUserService();
 
         const user = await userService.execute(req.body);
@@ -18,7 +18,7 @@ export class UserController {
 
         const userRepository = new UpdateUserService();
 
-        const user = await userRepository.execute(Number(id), req.body);
+        const user = await userRepository.execute(+id, req.body);
 
         return res.status(200).json(user);
     }

@@ -14,7 +14,7 @@ export class Medic {
     @Column({ unique: true })
     email: string;
 
-    @Column({ unique: true })
+    @Column()
     password: string;
 
     @Column({ unique: true })
